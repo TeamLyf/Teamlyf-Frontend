@@ -66,7 +66,6 @@ export default function Page() {
             <p className="text-[#4f4f4f] font-light text-[12px]">
               " You're making great progress on this project keep it up! "
             </p>
-
             <div className="flex justify-between my-2">
               <div className="flex gap-3 items-center">
                 <Image
@@ -94,6 +93,28 @@ export default function Page() {
                     height={8}
                   />
                 </button>
+              </div>
+            </div>
+
+            <div className="flex justify-between">
+              <div className="flex gap-3 w-[70%]">
+                <div className="w-[24px] h-[24px] border border-[#eaeaea] rounded-full bg-white flex items-center justify-center">
+                  <div className="rounded-full bg-[#eaeaea] w-[12px] h-[12px]"></div>
+                </div>
+                <h6 className="font-light text-[12px] w-[90%]">
+                  Implement a matchmaking system to allow players to compete
+                  against each other.
+                </h6>
+              </div>
+
+              <div className="flex gap-3 items-center bg-[#fdf0e4] p-2 rounded-xl w-[30%]">
+                <Image
+                  src="/assets/mark.svg"
+                  alt="task summary"
+                  width={15}
+                  height={15}
+                />
+                <span className="font-light text-[10px]">Medium Priority</span>
               </div>
             </div>
           </div>
