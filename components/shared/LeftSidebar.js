@@ -3,14 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sidebarlinks } from "../../constant/index.js";
 
-
 const LeftSidebar = () => {
   return (
     <section className="leftsidebar bg-white">
       <div className="flex w-full flex-col max-h-full gap-10">
         <div className="flex w-full flex-1 flex-col">
-          {Sidebarlinks.map(link => (
-            <Link className="leftsidebar_link text-blue" href={link.route}>
+          {Sidebarlinks.map((link) => (
+            <Link
+              className="leftsidebar_link text-blue"
+              key={link.label}
+              href={link.route}
+            >
               <Image src={link.icons} alt={link.label} width={24} height={24} />
             </Link>
           ))}

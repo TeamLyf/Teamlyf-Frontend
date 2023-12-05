@@ -21,8 +21,12 @@ const Navbar = () => {
       <div className="flex  gap-6 items-center">
         <BsQuestionOctagon className="w-[24px] h-[24px] cursor-pointer" />
         <IoMdNotificationsOutline className="w-[24px] h-[24px] cursor-pointer" />
-        
-        <ProfileActions w={50} h={50}/>
+
+        <ProfileActions
+          width={50}
+          height={50}
+          classname="relative w-[50px] h-[50px]"
+        />
       </div>
     </nav>
   );
