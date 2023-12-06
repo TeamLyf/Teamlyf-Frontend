@@ -47,6 +47,11 @@ export default function Page() {
         <section className="flex justify-between mt-4">
           <div className="w-[49%] bg-white shadow-md rounded-xl p-4">
             <h4>Overall Progress</h4>
+            <div>
+              <svg>
+                <circle cx="50" cy="50" r="48"></circle>
+              </svg>
+            </div>
           </div>
           <div className="w-[49%] bg-white shadow-md rounded-xl p-4">
             <div className="flex justify-between">
