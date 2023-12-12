@@ -4,9 +4,15 @@ import { BsQuestionOctagon } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 import ProfileActions from "./ProfileActions";
-const Navbar = () => {
+const Navbar = ({ isopen }) => {
   return (
-    <nav className="navbar ">
+    <nav
+      className={`navbar ${
+        isopen
+          ? "w-[calc(100%-40px)] left-[40px]"
+          : "w-[calc(100%-150px)] left-[150px]"
+      }`}
+    >
       <div>logo</div>
       <div className="searchbar">
         <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[30px] my-auto " />
