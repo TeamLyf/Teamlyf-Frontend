@@ -4,15 +4,9 @@ import { BsQuestionOctagon } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 import ProfileActions from "./ProfileActions";
-const Navbar = ({ isopen }) => {
+const Navbar = () => {
   return (
-    <nav
-      className={`navbar ${
-        isopen
-          ? "w-[calc(100%-40px)] left-[40px]"
-          : "w-[calc(100%-150px)] left-[150px]"
-      }`}
-    >
+    <nav className="navbar">
       <div>logo</div>
       <div className="searchbar">
         <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[30px] my-auto " />
@@ -25,13 +19,13 @@ const Navbar = ({ isopen }) => {
       </div>
 
       <div className="flex  gap-6 items-center">
-        <BsQuestionOctagon className="w-[24px] h-[24px] cursor-pointer" />
-        <IoMdNotificationsOutline className="w-[24px] h-[24px] cursor-pointer" />
+        <BsQuestionOctagon className="w-[20px] h-[20px] cursor-pointer" />
+        <IoMdNotificationsOutline className="w-[20px] h-[20px] cursor-pointer" />
 
         <ProfileActions
-          width={50}
-          height={50}
-          classname="relative w-[50px] h-[50px]"
+          width={30}
+          height={30}
+          classname="relative w-[30px] h-[30px]"
         />
       </div>
     </nav>

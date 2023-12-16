@@ -10,18 +10,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-dark-3">
-        <div className="w-full relative min-h-screen">
-          <LeftSidebar isopen={isopen} setisOpen={setisOpen} />
-          <main
-            className={`absolute top-0 min-h-screen ${
-              isopen
-                ? "w-[calc(100%-40px)] left-[40px]"
-                : "w-[calc(100%-150px)] left-[150px]"
-            }`}
-          >
-            <Navbar isopen={isopen} />
-            <section className="pt-[100px] w-full">{children}</section>
-          </main>
+        <div className="w-full h-full">
+          <Navbar />
+          <div className="w-full relative">
+            <LeftSidebar isopen={isopen} setisOpen={setisOpen} />
+            <main
+              className={`absolute top-20 ${
+                isopen
+                  ? "w-[calc(100%-40px)] left-[40px]"
+                  : "w-[calc(100%-150px)] left-[150px]"
+              }`}
+            >
+              <section className="w-full">{children}</section>
+            </main>
+          </div>
         </div>
       </body>
     </html>
