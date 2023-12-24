@@ -13,7 +13,10 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
       className={`leftsidebar bg-white ${isopen ? "w-[50px]" : "w-[200px]"} `}
     >
       <ul className="absolute top-20 left-0 w-full h-full px-2">
-        <div className={`leftsidebar_link ${isopen && "tooltip"}`}>
+        <div
+          className={`leftsidebar_link ${isopen && "tooltip"}`}
+          data-tip="workspace"
+        >
           <Image
             src={"/assets/sideicon9.svg"}
             alt="label"
@@ -23,17 +26,14 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
           <span className={`${isopen && "hidden"} origin-left duration-200`}>
             workspace
           </span>
-
+        </div>
+        <div className="absolute top-[15px] right-[-20px] stroke-black translate-x-[-50%] translate-y-[-50%] text-[20px]">
           {isopen ? (
             <TbLayoutSidebarLeftExpandFilled
-              className="absolute top-[50%] right-[-20px] stroke-black translate-x-[-50%] translate-y-[-50%] text-[20px]"
               onClick={() => setisOpen(!isopen)}
             />
           ) : (
-            <TbLayoutSidebarRightExpand
-              className="absolute top-[50%] right-[-20px] translate-x-[-50%] translate-y-[-50%] text-[20px]"
-              onClick={() => setisOpen(!isopen)}
-            />
+            <TbLayoutSidebarRightExpand onClick={() => setisOpen(!isopen)} />
           )}
         </div>
         {Sidebarlinks.map((link) => (
@@ -55,7 +55,7 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
             </Link>
           </li>
         ))}
-        <div className="absolute bottom-[100px] left-0 w-full">
+        <div className="absolute bottom-[100px] left-0 w-full px-2">
           <li className="relative">
             <Link
               className={`leftsidebar_link ${isopen && "tooltip"}`}
