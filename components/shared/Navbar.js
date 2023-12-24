@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div>logo</div>
       <div className="searchbar">
-        <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[30px] my-auto " />
+        <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[20px] my-auto " />
         <input
           type="search"
           name="search"
@@ -26,6 +26,7 @@ const Navbar = () => {
           width={30}
           height={30}
           classname="relative w-[30px] h-[30px]"
+          customClass="flex-row-reverse"
         />
       </div>
     </nav>

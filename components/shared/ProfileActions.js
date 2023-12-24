@@ -1,7 +1,15 @@
 import Image from "next/image";
-const ProfileActions = ({ children, height, width, classname }) => {
+const ProfileActions = ({
+  children,
+  height,
+  width,
+  classname,
+  customClass,
+}) => {
   return (
-    <div className="flex gap-2 items-center cursor-pointer w-full">
+    <div
+      className={`flex gap-2 items-center cursor-pointer w-full ${customClass}`}
+    >
       <div className={classname}>
         <Image
           src="/assets/profile_img.png"
