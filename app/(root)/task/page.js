@@ -10,9 +10,9 @@ export default function Page() {
           <section className="w-full bg-white shadow-md p-5 rounded-xl">
             <div className="flex justify-between items-center w-full ">
               <ProfileActions
-                width={120}
-                height={120}
-                classname="relative w-[120px] h-[120px]"
+                width={60}
+                height={60}
+                classname="relative w-[60px] h-[60px]"
               >
                 <p>daniel@gmail.com</p>
               </ProfileActions>

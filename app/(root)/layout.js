@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
             <main
               className={`absolute top-20 ${
                 isopen
-                  ? "w-[calc(100%-40px)] left-[40px]"
+                  ? "w-[calc(100%-50px)] left-[50px]"
                   : "w-[calc(100%-150px)] left-[150px]"
               }`}
             >
