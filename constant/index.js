@@ -9,7 +9,7 @@ export const Sidebarlinks = [
   {
     icons: "/assets/sideicon4.svg",
     route: "/link-path",
-    label: "label4label4",
+    label: "label4",
   },
   { icons: "/assets/sideicon5.svg", route: "/link-path", label: "label5" },
   { icons: "/assets/sideicon6.svg", route: "/link-path", label: "label6" },
