@@ -10,7 +10,7 @@ import {
 const LeftSidebar = ({ isopen, setisOpen }) => {
   return (
     <aside
-      className={`leftsidebar bg-white ${isopen ? "w-[50px]" : "w-[200px]"} `}
+      className={`leftsidebar bg-white ${isopen ? "w-[60px]" : "w-[200px]"} `}
     >
       <ul className="absolute top-20 left-0 w-full h-full px-2">
         <div
@@ -30,14 +30,18 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
         <div className="absolute top-[15px] right-[-20px] stroke-black translate-x-[-50%] translate-y-[-50%] text-[20px]">
           {isopen ? (
             <TbLayoutSidebarLeftExpandFilled
+              className="cursor-pointer"
               onClick={() => setisOpen(!isopen)}
             />
           ) : (
-            <TbLayoutSidebarRightExpand onClick={() => setisOpen(!isopen)} />
+            <TbLayoutSidebarRightExpand
+              className="cursor-pointer"
+              onClick={() => setisOpen(!isopen)}
+            />
           )}
         </div>
         {Sidebarlinks.map((link) => (
-          <li className="relative">
+          <li className="relative mt-2.5">
             <Link
               className={`leftsidebar_link ${isopen && "tooltip"}`}
               key={link.label}
@@ -78,7 +82,7 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
             </Link>
           </li>
 
-          <li className="relative">
+          <li className="relative mt-2.5">
             <Link
               className={`leftsidebar_link ${isopen && "tooltip"}`}
               data-tip="accessibility"
@@ -99,7 +103,7 @@ const LeftSidebar = ({ isopen, setisOpen }) => {
               </span>
             </Link>
           </li>
-          <li className="relative">
+          <li className="relative mt-2.5">
             <Link
               className={`leftsidebar_link ${isopen && "tooltip"}`}
               data-tip="logout"
