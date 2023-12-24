@@ -10,13 +10,10 @@ import {
 const LeftSidebar = ({ isopen, setisOpen }) => {
   return (
     <aside
-      className={`leftsidebar bg-white ${isopen ? "w-[50px]" : "w-[150px]"} `}
+      className={`leftsidebar bg-white ${isopen ? "w-[50px]" : "w-[200px]"} `}
     >
       <ul className="absolute top-20 left-0 w-full h-full">
-        <div
-          className={`leftsidebar_link ${isopen && "tooltip"}`}
-          data-tip="workspace"
-        >
+        <div className={`leftsidebar_link`}>
           <Image
             src={"/assets/sideicon9.svg"}
             alt="label"
