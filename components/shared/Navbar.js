@@ -6,10 +6,10 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import ProfileActions from "./ProfileActions";
 const Navbar = () => {
   return (
-    <nav className="navbar ">
+    <nav className="navbar">
       <div>logo</div>
       <div className="searchbar">
-        <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[30px] my-auto " />
+        <CiSearch className="absolute top-[50%] left-[20px] translate-x-[-50%] translate-y-[-50%] text-[20px] my-auto " />
         <input
           type="search"
           name="search"
@@ -19,13 +19,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex  gap-6 items-center">
-        <BsQuestionOctagon className="w-[24px] h-[24px] cursor-pointer" />
-        <IoMdNotificationsOutline className="w-[24px] h-[24px] cursor-pointer" />
+        <BsQuestionOctagon className="w-[20px] h-[20px] cursor-pointer" />
+        <IoMdNotificationsOutline className="w-[20px] h-[20px] cursor-pointer" />
 
         <ProfileActions
-          width={50}
-          height={50}
-          classname="relative w-[50px] h-[50px]"
+          width={30}
+          height={30}
+          classname="relative w-[30px] h-[30px]"
+          customClass="flex-row-reverse"
         />
       </div>
     </nav>

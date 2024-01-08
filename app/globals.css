@@ -3,23 +3,21 @@
 @tailwind utilities;
 
 @layer components {
-  .main-container {
-    @apply flex min-h-screen flex-1;
-  }
   .navbar {
-    @apply fixed top-0 z-30 flex w-full justify-between items-center px-6 py-3 bg-white;
+    @apply fixed top-0 z-50 flex w-full justify-between px-3 py-2 items-center bg-white;
   }
   .leftsidebar {
-    @apply sticky left-0 top-0 pt-20 z-20 flex h-screen w-fit flex-col justify-between  border-r;
+    @apply fixed top-0 h-full duration-300 z-10 border-r;
   }
   .leftsidebar_link {
-    @apply relative flex justify-start gap-4 rounded-lg p-3 cursor-pointer;
+    @apply relative flex py-1.5 px-2 rounded-md cursor-pointer hover:bg-dark-3 text-blue text-sm items-center gap-x-4 w-full text-[unset];
   }
-  .rightsidebar {
-    @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between gap-12 overflow-auto border-l px-10 pb-6 pt-28;
+  .tooltip {
+    @apply before:content-[attr(data-tip)] before:absolute before:top-1/2 before:px-2 before:py-1.5 before:left-[calc(100%+10px)] before:w-max before:max-w-xs before:-translate-x-0 before:-translate-y-1/2 before:bg-gray-700 before:text-white before:text-[10px] before:rounded-xl before:hidden before:transition-all
+    after:absolute after:right-[-10px] after:h-0 after:w-0 after:top-1/2 after:-translate-x-0 after:-translate-y-1/2 after:border-[6px] after:border-gray-700 after:border-r-gray-700 after:border-l-transparent after:border-b-transparent after:border-t-transparent after:hidden after:transition-all hover:before:block hover:after:block;
   }
   .searchbar {
-    @apply relative pointer-events-none  w-[756px] h-[40px];
+    @apply relative pointer-events-none  w-[700px] h-[40px];
   }
   .searchbar_input {
     @apply rounded-[20px] border-none block outline-none w-full h-full ring-1 ring-inset ring-gray-300 shadow-md pointer-events-auto px-4 py-2 ps-[40px] !important;
